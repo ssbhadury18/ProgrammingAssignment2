@@ -1,7 +1,6 @@
-## Put comments here that give an overall description of what your
-## functions do
+## create matrix that cache the computed inverse
 
-## Write a short comment describing this function
+## Create the matrix that cache inverse
 
 makeCacheMatrix <- function(x = matrix()) {
 invrs= NULL
@@ -14,6 +13,8 @@ setinvrs= function (inverse) invrs<<-inverse
 getinvrs= function() invrs
 list (set=set,get=get,setinvrs=setinvrs,getinvrs=getinvrs)
 }
+
+## compute the inverse of the matrix
 CacheSolve<- function(x,...){
 invrs=x$getinvrs()
 if(!is.null(invrs)){
